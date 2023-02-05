@@ -6,45 +6,16 @@ namespace Entities.Concrete
 {
     public class Person
     {
+        private string _lastname;
+        public string FirstName { get; set; } = "Mustafa";
+        public string LastName {
+            get { return "Mr." +_lastname; }
 
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+            set { _lastname = value; } 
+        }
         public long NationalIdentity { get; set; }
         public int DateOfBirthYear { get; set; }
 
 
-
-        public void SelamVer()
-        {
-            Console.WriteLine("**********************************");
-
-            Console.Write("Selam vermek istediğin vatandaşı yaz :");
-            string personName = Console.ReadLine();
-            Console.WriteLine("Selam Verdiğin Vatandaşın İsmi: " + personName);
-        }
-
-        public void Topla()
-                     
-        {
-            Console.WriteLine("**********************************")
-                ;
-
-            Console.Write(" Vatandaşın bu seneki toplam vurduğu aşı sayısını yaz: ");
-            int asi1 = Convert.ToInt32(Console.ReadLine());
-            Console.Write(" Vatandaşın geçen seneki toplam vurduğu aşı sayısı yaz: ");
-            int asi2 = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine($"Vatandaşın vurulduğu toplam aşı sayısı:{asi1 + asi2} " );
-        }
-
-
     }
 }
-
-/*
-public int Topla(int sayi1 = 5, int sayi2 = 10)
-{
-    int sonuc = sayi1 + sayi2;
-    return sonuc;
-}
-*/
